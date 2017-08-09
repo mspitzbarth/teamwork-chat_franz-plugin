@@ -1,0 +1,24 @@
+{
+  "name": "Teamwork Chat",
+  "version": "1.0.0",
+  "description": "Teamwork Chat",
+  "main": "index.js",
+  "author": "Markus Spitzbarth",
+  "license": "MIT",
+  "config": {
+    "serviceURL": "https://{teamID}.teamwork.com/chat/",
+    "serviceName": "Teamwork Chat",
+    "popup": [],
+    "hasNotificationSound": true,
+    "hasedirectMessages": true,
+    "hasTeamID": true,
+    "customURL": false,
+    "hostedOnly": false,
+    "webviewOptions": {},
+    "openDevTools": false,
+    "wording": {
+        "url": "teamwork.com/chat/",
+        "team": "Teamwork Chat"
+    }
+  }
+}
