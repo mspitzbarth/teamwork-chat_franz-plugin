@@ -1,6 +1,6 @@
 {
   "name": "Teamwork Chat",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Teamwork Chat",
   "main": "index.js",
   "author": "Markus Spitzbarth",
@@ -11,6 +11,7 @@
     "popup": [],
     "hasNotificationSound": true,
     "hasedirectMessages": true,
+    "hasIndirectMessages": true,
     "hasTeamID": true,
     "customURL": false,
     "hostedOnly": false,
