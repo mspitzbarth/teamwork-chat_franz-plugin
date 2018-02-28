@@ -14,7 +14,6 @@ module.exports = Franz => {
       directCount = parseInt(directMessages.innerText);
     }
 
-    // Get badge cound from indirect messages
     var indirectMessages = document.getElementsByClassName("conversation-summary-unread-indicator--shown");
     [].forEach.call(indirectMessages, function(e) {
       var countValue = e.innerText;
@@ -23,10 +22,8 @@ module.exports = Franz => {
       }
     });
 
-    // Set new count number for the badge
     Franz.setBadge(directCount, indirectCount);
   };
 
-  // Runs action every second
   Franz.loop(getMessages);
 }
