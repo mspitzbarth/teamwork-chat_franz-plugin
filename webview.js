@@ -7,7 +7,6 @@ module.exports = Franz => {
     let directCount = 0;
     let indirectCount = 0;
 
-    // Get badge count from direct messages
     let directMessages = document.getElementsByClassName('sidebar-notification-indicator')[0];
 
     if (directMessages && directMessages.innerText) {
