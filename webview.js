@@ -1,6 +1,7 @@
-// Teamwork Chat integration
-module.exports = (Franz, options) => {
-  function getMessages() {
+'use strict';
+
+module.exports = Franz => {
+  const getMessages = function getMessages() {
     const count = {};
 
     let directCount = 0;
@@ -24,7 +25,7 @@ module.exports = (Franz, options) => {
 
     // Set new count number for the badge
     Franz.setBadge(directCount, indirectCount);
-  }
+  };
 
   // Runs action every second
   Franz.loop(getMessages);
