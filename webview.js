@@ -1,5 +1,7 @@
 'use strict';
 
+const path = require('path');
+
 module.exports = Franz => {
   const getMessages = function getMessages() {
     const count = {};
@@ -7,13 +9,13 @@ module.exports = Franz => {
     let directCount = 0;
     let indirectCount = 0;
 
-    let directMessages = document.getElementsByClassName('sidebar-notification-indicator')[0];
+    let directMessages = document.getElementsByClassName('s-conversations-nav__unread-important-indicator')[0];
 
     if (directMessages && directMessages.innerText) {
       directCount = parseInt(directMessages.innerText);
     }
 
-    var indirectMessages = document.getElementsByClassName("conversation-summary-unread-indicator--shown");
+    var indirectMessages = document.getElementsByClassName("s-conversation-preview__unread-important-indicator  ");
     [].forEach.call(indirectMessages, function(e) {
       var countValue = e.innerText;
       if (countValue == "") {
@@ -23,6 +25,6 @@ module.exports = Franz => {
 
     Franz.setBadge(directCount, indirectCount);
   };
-
+  
   Franz.loop(getMessages);
 }
